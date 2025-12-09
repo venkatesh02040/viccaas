@@ -1476,7 +1476,7 @@ form textarea {
     width: 18px;
     /* adjust size */
     height: 18px;
-    background-image: url("/icon.jpg");
+    background-image: url("./icon.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
