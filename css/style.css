@@ -644,6 +644,17 @@ section {
     text-align: center;
 }
 
+.main-contact-form {
+    flex: 1;
+    width: 100%;
+    background: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 4px 4px 8px 0 rgba(209, 28, 94, 0.4);
+
+}
+
 .contact-hero h1 {
     color: white;
 }
