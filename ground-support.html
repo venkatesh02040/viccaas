@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ground Ambulance Support | viccaas</title>
+<link rel="stylesheet" href="css/style.css" />
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 9999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+  </style></head>
+
+<body>
+  <header class="navbar">
+    <div><img class="logo" src="/Viccaas Logo.png" alt="Viccaas Logo"></div>
+
+    <!-- ✅ Normal nav links (visible on desktop only) -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="services.html" class="dropbtn active">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="air-ambulance.html">Air Ambulance Transfer</a></li>
+            <li><a href="medical-escort.html">Medical Escort</a></li>
+            <li><a href="ground-support.html" class="active">Ground Ambulance Support</a></li>
+            <li><a href="organ-transport.html">Organ Transport</a></li>
+          </ul>
+        </li>
+
+        <li><a href="fleet.html">Fleet</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="contact.html" class="btn-emergency">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ✅ Hamburger (visible on mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+
+  <!-- Fullscreen Nav Canvas / Overlay -->
+  <div id="nav-canvas" class="nav-canvas" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="nav-canvas-inner" role="document">
+      <button id="nav-close" class="nav-close" aria-label="Close navigation">✕</button>
+
+      <nav class="canvas-nav" aria-label="Main Navigation">
+        <ul class="canvas-links" id="canvas-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+          <!-- Expandable services inside canvas -->
+          <li class="canvas-dropdown">
+            <button class="canvas-dropbtn" aria-expanded="false">Services ▾</button>
+            <ul class="canvas-dropdown-content" aria-hidden="true">
+              <li><a href="air-ambulance.html">Air Ambulance Transfer</a></li>
+              <li><a href="medical-escort.html">Medical Escort</a></li>
+              <li><a href="ground-support.html" class="active">Ground Ambulance Support</a></li>
+              <li><a href="organ-transport.html">Organ Transport</a></li>
+              <li><a href="services.html">View All</a></li>
+            </ul>
+          </li>
+
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="contact.html" class="btn-emergency">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 🔹 HERO SECTION -->
+  <section class="service-hero" style="background-image: url('/ground-ambulance-support-banner.png');">
+    <div class="overlay">
+      <h1>Ground Ambulance Support</h1>
+      <p>Reliable medical ground transportation for hospital and airport transfers.</p>
+    </div>
+  </section>
+
+  <!-- 🔹 MAIN SERVICE DETAILS -->
+  <section class="service-detail">
+    <div class="service-detail-container">
+      <div class="service-image">
+        <img src="/ground-ambulance-support-sub-banner.png" alt="Ground Ambulance Support">
+      </div>
+
+      <div class="service-content">
+        <h2>Seamless Hospital and Airport Transfers</h2>
+        <p>
+          viccaas provides <strong>Ground Ambulance Support</strong> as an essential part of our complete patient transport solution. Whether it’s a hospital-to-airport transfer or bedside-to-bedside service, our ground ambulances ensure continuous care and smooth coordination.
+        </p>
+
+        <h3>Our Services Include</h3>
+        <ul>
+          <li>Fully equipped ambulances with oxygen and medical monitors</li>
+          <li>Certified paramedics and trained drivers</li>
+          <li>Coordination with hospital and air ambulance teams</li>
+          <li>Bedside-to-bedside patient transfer</li>
+          <li>24/7 availability and rapid response</li>
+        </ul>
+
+        <a href="contact.html" class="btn-primary">Book Ground Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 WHY CHOOSE SECTION -->
+  <section class="why-choose-service">
+    <h2>Why Choose viccaas Ground Ambulance?</h2>
+    <div class="why-service-grid">
+      <div class="why-card">
+        <img src="/advanced-fleet.png" alt="Advanced Vehicles">
+        <h3>Advanced Ambulance Fleet</h3>
+        <p>Our ground vehicles are fully equipped with emergency and life-support equipment for all patient needs.</p>
+      </div>
+      <div class="why-card">
+        <img src="/seamless-transfer.png" alt="Team Coordination">
+        <h3>Perfect Coordination</h3>
+        <p>Seamless communication between our air and ground teams ensures uninterrupted medical care.</p>
+      </div>
+      <div class="why-card">
+        <img src="/round-the-clock.png" alt="24/7 Service">
+        <h3>Round-the-Clock Availability</h3>
+        <p>We operate day and night to provide immediate response for all medical ground support requests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>viccaas Air Ambulance</h3>
+        <p>Saving lives across borders with professional air medical transport.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <p>Bengaluru, India</p>
+        <p>+91 98765 43210</p>
+        <p>info@viccaas.com</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 viccaas Air Ambulance | All Rights Reserved</p>
+ </footer>
+
+  <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+    target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

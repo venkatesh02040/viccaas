@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | viccaas Air Ambulance</title>
+
+  <!-- ✅ Toastify CDN -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 9999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔹 1. HEADER / NAVBAR -->
+  <header class="navbar">
+    <div><img class="logo" src="/Viccaas Logo.png" alt="Viccaas Logo"></div>
+
+    <!-- ✅ Normal nav links (visible on desktop only) -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="services.html" class="dropbtn">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="air-ambulance.html">Air Ambulance Transfer</a></li>
+            <li><a href="medical-escort.html">Medical Escort</a></li>
+            <li><a href="ground-support.html">Ground Ambulance Support</a></li>
+            <li><a href="organ-transport.html">Organ Transport</a></li>
+          </ul>
+        </li>
+
+        <li><a href="fleet.html">Fleet</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="contact.html" class="btn-emergency">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ✅ Hamburger (visible on mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+
+  <!-- Fullscreen Nav Canvas / Overlay -->
+  <div id="nav-canvas" class="nav-canvas" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="nav-canvas-inner" role="document">
+      <button id="nav-close" class="nav-close" aria-label="Close navigation">✕</button>
+
+      <nav class="canvas-nav" aria-label="Main Navigation">
+        <ul class="canvas-links" id="canvas-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+          <!-- Expandable services inside canvas -->
+          <li class="canvas-dropdown">
+            <button class="canvas-dropbtn" aria-expanded="false">Services ▾</button>
+            <ul class="canvas-dropdown-content" aria-hidden="true">
+              <li><a href="air-ambulance.html">Air Ambulance Transfer</a></li>
+              <li><a href="medical-escort.html">Medical Escort</a></li>
+              <li><a href="ground-support.html">Ground Ambulance Support</a></li>
+              <li><a href="organ-transport.html">Organ Transport</a></li>
+              <li><a href="services.html">View All</a></li>
+            </ul>
+          </li>
+
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="contact.html" class="btn-emergency">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- 🔹 2. HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Rapid Air Ambulance Services, Anytime, Anywhere.</h1>
+      <p>Your trusted partner in emergency medical transfers 24/7 global support.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Request Air Ambulance</a>
+        <a href="tel:+919876543210" class="btn-secondary">Call +91 98765 43210</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 3. WHY CHOOSE US -->
+  <section class="why-us">
+    <h2>Why to Choose viccaas?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <img src="/fast-response.png" alt="Fast Response">
+        <h3>Rapid Response</h3>
+        <p>Choose our emergency air ambulance service for immediate nationwide dispatch, combining expert critical care
+          with advanced medical support to ensure patient survival.</p>
+      </div>
+      <div class="why-card">
+        <img src="/expert-medical-crew.png" alt="Expert Crew">
+        <h3>Expert Medical Crew</h3>
+        <p>With a medical crew of specialized doctors and paramedics, we provide ICU-standard support during flight,
+          ensuring the safest emergency patient transport in India.</p>
+      </div>
+      <!--  <div class="why-card">
+        <img src="/global-reach.png" alt="Global Reach">
+        <h3>Global Reach</h3>
+        <p>Covering domestic and international routes with full coordination support.</p>
+      </div> -->
+      <div class="why-card">
+        <img src="/24-7-availability.png" alt="24/7">
+        <h3>24/7 Availability</h3>
+        <p>Viccaas Air Ambulance provides round-the-clock emergency transport across India, ensuring rapid dispatch and
+          expert medical care when every minute counts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 4. SERVICES PREVIEW -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="/air-ambulance-transfer.png" alt="Air Ambulance">
+        <h3>Air Ambulance Transfer</h3>
+        <p>Fully equipped aircraft for patient transfers with real-time monitoring.</p>
+      </div>
+      <div class="service-card">
+        <img src="/medical-escort.png" alt="Medical Escort">
+        <h3>Medical Escort</h3>
+        <p>Professional assistance on commercial flights for stable patients.</p>
+      </div>
+      <div class="service-card">
+        <img src="/ground-ambulance-support.png" alt="Ground Support">
+        <h3>Ground Ambulance Support</h3>
+        <p>Seamless hospital-to-airport coordination for smooth transfers.</p>
+      </div>
+    </div>
+    <a href="services.html" class="btn-primary">View All Services</a>
+  </section>
+
+  <!-- 🔹 5. FLEET PREVIEW -->
+  <section class="fleet-preview">
+    <h2>Our Fleet</h2>
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <img src="/fleet-1.png" alt="Learjet 45">
+        <h3>Learjet 45</h3>
+        <p>Compact, fast, and ideal for medium-distance transfers.</p>
+      </div>
+      <div class="fleet-card">
+        <img src="/fleet-2.png" alt="Helicopter">
+        <h3>Medical Helicopter</h3>
+        <p>Perfect for quick short-range emergencies and city transfers.</p>
+      </div>
+      <div class="fleet-card">
+        <img src="/fleet-3.png" alt="Helicopter">
+        <h3>Medical Helicopter</h3>
+        <p>Perfect for quick short-range emergencies and city transfers.</p>
+      </div>
+    </div>
+    <a href="fleet.html" class="btn-secondary">See More Aircraft</a>
+  </section>
+
+  <!-- 🔹 6. EMERGENCY CONTACT FORM -->
+  <section class="contact-form">
+    <h2>Need Urgent Help?</h2>
+    <p>Fill in your details and our emergency response team will contact you immediately.</p>
+    <form id="emergencyForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Contact Number" required />
+      <input type="text" placeholder="From Location" required />
+      <input type="text" placeholder="To Location" required />
+      <textarea placeholder="Brief Description of Emergency" required></textarea>
+      <button type="submit" class="btn-primary">Request Assistance</button>
+    </form>
+  </section>
+
+  <!-- 🔹 CLIENT TESTIMONIALS CAROUSEL -->
+  <section class="about-testimonials">
+    <h2>What Our Clients Say</h2>
+
+    <div class="carousel-container">
+
+      <div class="carousel-track">
+
+        <div class="about-testimonial-card active">
+          <p>
+            "Viccaas was the fastest and most reliable air ambulance service we could find.
+            They were incredibly compassionate during our emergency."
+          </p>
+          <h4>Ravi Kumar</h4>
+          <p class="role">Patient's Family</p>
+        </div>
+
+        <div class="about-testimonial-card">
+          <p>
+            "As a hospital partner, we trust Viccaas for safe and timely patient transfers.
+            Their team is always professional and well-equipped."
+          </p>
+          <h4>Dr. Sunita Rao</h4>
+          <p class="role">Medical Partner</p>
+        </div>
+
+        <div class="about-testimonial-card">
+          <p>
+            "Thanks to Viccaas, my mother received immediate medical attention across state borders.
+            A truly lifesaving service!"
+          </p>
+          <h4>Priya Menon</h4>
+          <p class="role">Patient</p>
+        </div>
+
+      </div>
+
+      <!-- NAV BUTTONS -->
+      <button class="nav prev">❮</button>
+      <button class="nav next">❯</button>
+
+      <!-- DOTS -->
+      <div class="dots"></div>
+
+    </div>
+
+  </section>
+  <!-- 🔹 8. FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>viccaas Air Ambulance</h3>
+        <p>Saving lives across borders with professional air medical transport.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <p>Bengaluru, India</p>
+        <p>+91 98765 43210</p>
+        <p>info@viccaas.com</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 viccaas Air Ambulance | All Rights Reserved</p>
+  </footer>
+
+  <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+    target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    const track = document.querySelector(".carousel-track");
+    const slides = document.querySelectorAll(".about-testimonial-card");
+    const dotsContainer = document.querySelector(".dots");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const carousel = document.querySelector(".carousel-container");
+
+    let index = 0;
+    let interval;
+
+    /* -----------------------------------
+       CLONE FIRST SLIDE FOR SEAMLESS LOOP
+    ------------------------------------*/
+    const firstClone = slides[0].cloneNode(true);
+    track.appendChild(firstClone);
+
+    const allSlides = document.querySelectorAll(".about-testimonial-card");
+    const realSlidesCount = slides.length;
+
+    /* -----------------------------------
+       CREATE DOTS (ONLY REAL SLIDES)
+    ------------------------------------*/
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+
+      dot.addEventListener("click", () => moveToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".dot");
+
+    /* -----------------------------------
+       FUNCTIONS
+    ------------------------------------*/
+    function updateDots() {
+      dots.forEach(d => d.classList.remove("active"));
+      dots[index % realSlidesCount].classList.add("active");
+    }
+
+    function moveToSlide(i) {
+      index = i;
+      track.style.transition = "transform 0.5s ease";
+      track.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    }
+
+    function next() {
+      index++;
+
+      track.style.transition = "transform 0.5s ease";
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      if (index === realSlidesCount) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          index = 0;
+          track.style.transform = `translateX(0%)`;
+          updateDots();
+        }, 500);
+      } else {
+        updateDots();
+      }
+    }
+
+    function prev() {
+      if (index === 0) {
+        track.style.transition = "none";
+        index = realSlidesCount;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      setTimeout(() => {
+        index--;
+        track.style.transition = "transform 0.5s ease";
+        track.style.transform = `translateX(-${index * 100}%)`;
+        updateDots();
+      }, 20);
+    }
+
+    /* -----------------------------------
+       BUTTON EVENTS
+    ------------------------------------*/
+    nextBtn.onclick = next;
+    prevBtn.onclick = prev;
+
+    /* -----------------------------------
+       AUTOPLAY
+    ------------------------------------*/
+    function startAuto() {
+      interval = setInterval(next, 5000);
+    }
+
+    function stopAuto() {
+      clearInterval(interval);
+    }
+
+    /* PAUSE ON HOVER */
+    carousel.addEventListener("mouseenter", stopAuto);
+    carousel.addEventListener("mouseleave", startAuto);
+
+    /* START */
+    startAuto();
+  </script>
+</body>
+
+</html>

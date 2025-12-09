@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations | viccaas Air Ambulance</title>
+<link rel="stylesheet" href="css/style.css" />
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 9999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+  </style></head>
+
+<body>
+  <header class="navbar">
+    <div><img class="logo" src="/Viccaas Logo.png" alt="Viccaas Logo"></div>
+
+    <!-- ✅ Normal nav links (visible on desktop only) -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="services.html" class="dropbtn">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="air-ambulance.html">Air Ambulance Transfer</a></li>
+            <li><a href="medical-escort.html">Medical Escort</a></li>
+            <li><a href="ground-support.html">Ground Ambulance Support</a></li>
+            <li><a href="organ-transport.html">Organ Transport</a></li>
+          </ul>
+        </li>
+
+        <li><a href="fleet.html">Fleet</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="destinations.html"  class="active">Destinations</a></li>
+        <li><a href="contact.html" class="btn-emergency">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ✅ Hamburger (visible on mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+    <!-- Fullscreen Nav Canvas / Overlay -->
+  <div id="nav-canvas" class="nav-canvas" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="nav-canvas-inner" role="document">
+      <button id="nav-close" class="nav-close" aria-label="Close navigation">✕</button>
+
+      <nav class="canvas-nav" aria-label="Main Navigation">
+        <ul class="canvas-links" id="canvas-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+          <!-- Expandable services inside canvas -->
+          <li class="canvas-dropdown">
+            <button class="canvas-dropbtn" aria-expanded="false">Services ▾</button>
+            <ul class="canvas-dropdown-content" aria-hidden="true">
+              <li><a href="air-ambulance.html">Air Ambulance Transfer</a></li>
+              <li><a href="medical-escort.html">Medical Escort</a></li>
+              <li><a href="ground-support.html">Ground Ambulance Support</a></li>
+              <li><a href="organ-transport.html">Organ Transport</a></li>
+              <li><a href="services.html">View All</a></li>
+            </ul>
+          </li>
+
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="destinations.html"  class="active">Destinations</a></li>
+          <li><a href="contact.html" class="btn-emergency">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="service-hero" style="background-image: url('/destination-banner.png');">
+    <div class="overlay">
+      <h1>Our Reach Across India</h1>
+      <p>viccaas connects patients to top medical facilities across major Indian cities — swiftly and safely.</p>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations-section">
+    <h2>Our Major Destinations</h2>
+    <p class="section-intro">
+      viccaas offers nationwide air ambulance services, covering India’s largest and most important cities.
+    </p>
+
+    <div class="destinations-grid">
+
+      <div class="destination-card">
+        <img src="delhi.jpg" alt="Delhi" />
+        <div class="card-content">
+          <h3>Delhi</h3>
+          <p>Fastest response air ambulance services connecting patients to leading multi-speciality hospitals in the capital.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="mumbai.jpg" alt="Mumbai" />
+        <div class="card-content">
+          <h3>Mumbai</h3>
+          <p>Critical-care medical flights to and from Mumbai for emergency, repatriation, and inter-hospital transfers.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="bangalore.jpg" alt="Bengaluru" />
+        <div class="card-content">
+          <h3>Bengaluru</h3>
+          <p>Trusted air ambulance support for quick transfers between Bengaluru and other key healthcare hubs.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="chennai.jpg" alt="Chennai" />
+        <div class="card-content">
+          <h3>Chennai</h3>
+          <p>Emergency and planned air medical transfers providing access to Chennai’s advanced medical infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="kolkata.jpg" alt="Kolkata" />
+        <div class="card-content">
+          <h3>Kolkata</h3>
+          <p>Reliable evacuation and patient transport solutions operating across Kolkata and its surrounding areas.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="hyderabad.jpg" alt="Hyderabad" />
+        <div class="card-content">
+          <h3>Hyderabad</h3>
+          <p>Seamless air medical transportation linking Hyderabad to major hospitals nationwide.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="ahmedabad.jpg" alt="Ahmedabad" />
+        <div class="card-content">
+          <h3>Ahmedabad</h3>
+          <p>Dedicated medical flights ensuring safe and rapid transfers across Ahmedabad and western India.</p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="pune.jpg" alt="Pune" />
+        <div class="card-content">
+          <h3>Pune</h3>
+          <p>Efficient and well-coordinated patient transfers to and from Pune’s top healthcare centers.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2 style="color: white;">Need Assistance in Any City?</h2>
+    <p>Our team is available 24/7 to arrange air ambulance services across India’s major metro cities.</p>
+    <a href="contact.html" class="btn-primary" style="border: 1px solid white;">Contact viccaas Now</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>viccaas Air Ambulance</h3>
+        <p>Saving lives across India with professional air medical transport.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <p>Bengaluru, India</p>
+        <p>+91 98765 43210</p>
+        <p>info@viccaas.com</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 viccaas Air Ambulance | All Rights Reserved</p>
+  </footer>
+
+  <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+    target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
